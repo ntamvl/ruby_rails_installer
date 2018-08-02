@@ -28,6 +28,12 @@ echo -e "Install PostgreSQL done. \n\n"
 
 echo "Starting PostgreSQL..."
 brew services start postgresql
+
+# To upgrade databse from old version PG
 # brew postgresql-upgrade-database
+
+# To access from terminal
+# psql -d postgres 
+# or psql -d template1
 
 echo -e "\n\nDone."
