@@ -28,12 +28,18 @@ echo -e "Install PostgreSQL done. \n\n"
 
 echo "Starting PostgreSQL..."
 brew services start postgresql
-
 # To upgrade databse from old version PG
 # brew postgresql-upgrade-database
 
 # To access from terminal
 # psql -d postgres 
 # or psql -d template1
+echo -e "Start PostgreSQL completed. \n\n"
 
-echo -e "\n\nDone."
+echo -e "Install git bash-completion"
+brew install git bash-completion
+# Add bash-completion to your ~/.bash_profile:
+# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+echo -e "Install git bash-completion completed. \n\n"
+
+echo -e "\n\nDone. \n\n"
