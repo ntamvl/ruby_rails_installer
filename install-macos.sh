@@ -1,5 +1,9 @@
 #!/bin/bash -e 
 
+echo "Install homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo "Install homebrew completed. \n\n"
+
 echo "Installing rbenv..."
 brew install rbenv ruby-build
 echo -e "Install rbenv done. \n\n"
