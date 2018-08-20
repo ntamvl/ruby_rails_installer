@@ -46,4 +46,9 @@ brew install git bash-completion
 # [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 echo -e "Install git bash-completion completed. \n\n"
 
+echo -e "Install vimrc"
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+echo -e "Install vimrc completed. \n\n"
+
 echo -e "\n\nDone. \n\n"
