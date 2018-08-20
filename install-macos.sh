@@ -64,4 +64,12 @@ echo -e "Install htop"
 brew install htop
 echo -e "Install htop completed."
 
+echo -e "Install ffmpeg"
+brew install ffmpeg
+echo -e "Install ffmpeg completed."
+
+echo -e "Install youtube-dl"
+brew install youtube-dl
+echo -e "Install youtube-dl completed."
+
 echo -e "\n\nDone. \n\n"
