@@ -56,4 +56,12 @@ brew install redis
 brew services start redis
 echo -e "Install Redis completed."
 
+echo -e "Install tmux"
+brew install tmux
+echo -e "Install tmux completed."
+
+echo -e "Install htop"
+brew install htop
+echo -e "Install htop completed."
+
 echo -e "\n\nDone. \n\n"
