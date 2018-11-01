@@ -13,15 +13,15 @@ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_pr
 source ~/.bash_profile
 
 echo "Installing Ruby..."
-rbenv install 2.5.1
-rbenv global 2.5.1
+rbenv install 2.5.3
+rbenv global 2.5.3
 ruby -v
 echo -e "Install Ruby done. \n\n"
 
 git config --global color.ui true
 
-echo "Installing Rails 5.2.1..."
-gem install rails -v 5.2.1
+echo "Installing Rails 5.2.3..."
+gem install rails -v 5.2.3
 rbenv rehash
 rails -v
 echo -e "Install Rails done. \n\n"
