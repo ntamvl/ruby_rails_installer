@@ -20,8 +20,8 @@ echo -e "Install Ruby done. \n\n"
 
 git config --global color.ui true
 
-echo "Installing Rails 5.2.1..."
-gem install rails -v 5.2.1
+echo "Installing Rails 5.2.2..."
+gem install rails -v 5.2.2
 rbenv rehash
 rails -v
 echo -e "Install Rails done. \n\n"
