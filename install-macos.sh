@@ -1,5 +1,8 @@
 #!/bin/bash -e 
 
+RUBY_VERSION=2.6.0
+RAILS_VERSION=2.5.2
+
 echo "Install homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo "Install homebrew completed. \n\n"
@@ -12,19 +15,19 @@ echo -e "Install rbenv done. \n\n"
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
 source ~/.bash_profile
 
-echo "Installing Ruby..."
-rbenv install 2.5.3
-rbenv global 2.5.3
+echo "Installing Ruby ${RUBY_VERSION}..."
+rbenv install $RUBY_VERSION
+rbenv global $RUBY_VERSION
 ruby -v
-echo -e "Install Ruby done. \n\n"
+echo -e "Installed Ruby ${RUBY_VERSION} done. \n\n"
 
 git config --global color.ui true
 
-echo "Installing Rails 5.2.2..."
-gem install rails -v 5.2.2
+echo "Installing Rails ${RAILS_VERSION}..."
+gem install rails -v $RAILS_VERSION
 rbenv rehash
 rails -v
-echo -e "Install Rails done. \n\n"
+echo -e "Install Rails ${RAILS_VERSION} done. \n\n"
 
 echo "Installing PostgreSQL..."
 brew install postgresql
