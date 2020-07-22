@@ -23,7 +23,7 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 exec $SHELL
-source ~/.bashrc
+bash
 echo -e "Install rbenv done. \n\n"
 
 echo "Installing Ruby ${RUBY_VERSION}..."
@@ -37,6 +37,8 @@ ruby -v
 echo -e "Installed Ruby ${RUBY_VERSION} done. \n\n"
 
 git config --global color.ui true
+
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 echo "Installing Rails ${RAILS_VERSION}..."
 gem install rails -v $RAILS_VERSION
