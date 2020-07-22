@@ -1,7 +1,7 @@
 #!/bin/bash -e 
 
-RUBY_VERSION=2.6.5
-RAILS_VERSION=6.0.0
+RUBY_VERSION=2.7.1
+RAILS_VERSION=6.0.3.2
 
 echo "Install homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
