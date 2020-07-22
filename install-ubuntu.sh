@@ -7,14 +7,14 @@ echo "Install recommend packages"
 sudo apt update
 sudo apt -y install curl
 
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+# curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+# echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 # curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 # curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 # echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
-sudo apt -y install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
+sudo apt install -y gcc g++ make git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
 echo "Install recommend packages completed. \n\n"
 
 echo "Installing rbenv..."
@@ -43,12 +43,8 @@ rbenv rehash
 rails -v
 echo -e "Install Rails ${RAILS_VERSION} done. \n\n"
 
-echo "Installing PostgreSQL..."
-brew install postgresql
-echo -e "Install PostgreSQL done. \n\n"
-
 echo "Starting PostgreSQL..."
-sudo apt -y install postgresql postgresql-contrib
+sudo apt install -y postgresql postgresql-contrib
 # sudo -i -u postgres
 # psql
 
@@ -61,7 +57,7 @@ sudo apt -y install postgresql postgresql-contrib
 echo -e "Start PostgreSQL completed. \n\n"
 
 echo -e "Install bash-completion"
-sudo apt -y install bash-completion
+sudo apt install -y bash-completion
 # cat /etc/profile.d/bash_completion.sh
 ## source it from ~/.bashrc or ~/.bash_profile ##
 # echo "source /etc/profile.d/bash_completion.sh" >> ~/.bashrc
@@ -78,23 +74,23 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 echo -e "Install vimrc completed. \n\n"
 
 echo -e "Install Redis"
-sudo apt -y install redis-server
+sudo apt install -y redis-server
 echo -e "Install Redis completed."
 
 echo -e "Install tmux"
-sudo apt -y install tmux
+sudo apt install -y tmux
 echo -e "Install tmux completed."
 
 echo -e "Install htop"
-sudo apt -y install htop
+sudo apt install -y htop
 echo -e "Install htop completed."
 
 echo -e "Install ffmpeg"
-sudo apt -y install ffmpeg
+sudo apt install -y ffmpeg
 echo -e "Install ffmpeg completed."
 
 echo -e "Install youtube-dl"
-sudo apt -y install youtube-dl
+sudo apt install -y youtube-dl
 echo -e "Install youtube-dl completed."
 
 echo -e "\n\nDone. \n\n"
