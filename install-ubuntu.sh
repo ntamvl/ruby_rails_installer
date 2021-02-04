@@ -1,7 +1,9 @@
-#!/bin/bash -e 
+#!/bin/bash
 
-RUBY_VERSION=2.7.1
-RAILS_VERSION=6.0.3.2
+set -e
+
+RUBY_VERSION=3.0.0
+RAILS_VERSION=6.1.1
 
 echo "Install recommend packages"
 sudo apt update
@@ -95,5 +97,13 @@ echo -e "Install ffmpeg completed."
 echo -e "Install youtube-dl"
 sudo apt install -y youtube-dl
 echo -e "Install youtube-dl completed."
+
+echo "Install ohmyzsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Install ohmyzsh completed."
+
+echo "Install powerlevel10k for ohmyzsh"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+echo "Install powerlevel10k for ohmyzsh completed."
 
 echo -e "\n\nDone. \n\n"
