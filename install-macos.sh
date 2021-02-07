@@ -6,7 +6,7 @@ RUBY_VERSION=3.0.0
 RAILS_VERSION=6.1.1
 
 echo "Install homebrew"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ntamvl/ruby_rails_installer/master/install-macos.sh)" 
 echo "Install homebrew completed. \n\n"
 
 echo "Installing rbenv..."
