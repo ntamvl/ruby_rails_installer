@@ -23,6 +23,10 @@ rbenv global $RUBY_VERSION
 ruby -v
 echo "Installed Ruby ${RUBY_VERSION} done. \n\n"
 
+echo "Installing rubocop"
+gem install rubocop
+echo "Installing rubocop completed."
+
 git config --global color.ui true
 
 echo "Installing Rails ${RAILS_VERSION}..."
