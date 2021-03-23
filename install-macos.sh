@@ -1,9 +1,9 @@
-#!/bin/bash -e 
+#!/bin/bash -e
 
 set -e
 
 RUBY_VERSION=3.0.0
-RAILS_VERSION=6.1.1
+RAILS_VERSION=6.1.3
 
 echo "Install homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -45,7 +45,7 @@ brew services start postgresql
 # brew postgresql-upgrade-database
 
 # To access from terminal
-# psql -d postgres 
+# psql -d postgres
 # or psql -d template1
 echo "Start PostgreSQL completed. \n\n"
 

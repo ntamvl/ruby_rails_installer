@@ -3,7 +3,7 @@
 set -e
 
 RUBY_VERSION=3.0.0
-RAILS_VERSION=6.1.1
+RAILS_VERSION=6.1.3
 
 echo "Install recommend packages"
 sudo apt update
