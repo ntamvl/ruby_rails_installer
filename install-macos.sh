@@ -2,8 +2,8 @@
 
 set -e
 
-RUBY_VERSION=3.0.0
-RAILS_VERSION=6.1.3
+RUBY_VERSION=3.0.2
+RAILS_VERSION=6.1.4
 
 echo "Install homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
