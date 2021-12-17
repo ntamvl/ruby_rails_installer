@@ -9,6 +9,20 @@ echo "Install homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "Install homebrew completed. \n\n"
 
+echo -e "Install vimrc"
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+echo "Install vimrc completed. \n\n"
+
+echo "Install ohmyzsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Install powerlevel10k for ohmyzsh"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+source ~/.zshrc
+echo "Install powerlevel10k for ohmyzsh completed."
+
 echo "Installing rbenv..."
 brew install rbenv ruby-build
 echo "Install rbenv done. \n\n"
@@ -55,11 +69,6 @@ brew install git bash-completion
 # [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 echo -e "Install git bash-completion completed. \n\n"
 
-echo -e "Install vimrc"
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
-echo "Install vimrc completed. \n\n"
-
 echo "Install Redis"
 brew install redis
 brew services start redis
@@ -84,15 +93,6 @@ echo "Install youtube-dl completed."
 echo "Install midnight commander"
 brew install mc
 echo "Install midnight commander completed."
-
-echo "Install ohmyzsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-echo "Install powerlevel10k for ohmyzsh"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-source ~/.zshrc
-echo "Install powerlevel10k for ohmyzsh completed."
 
 # echo "Download zsh-autosuggestions"
 # git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
