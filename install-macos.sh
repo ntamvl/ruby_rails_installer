@@ -12,24 +12,29 @@ echo "Install homebrew completed. \n\n"
 echo -e "Install vimrc"
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
-echo "Install vimrc completed. \n\n"
+echo -e "Install vimrc completed. \n\n"
 
 echo "Install ohmyzsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
 echo "Install powerlevel10k for ohmyzsh"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-source ~/.zshrc
+# source ~/.zshrc
 echo "Install powerlevel10k for ohmyzsh completed."
 
 echo "Installing rbenv..."
 brew install rbenv ruby-build
-echo "Install rbenv done. \n\n"
+echo -e "Install rbenv done. \n\n"
 
 # Add rbenv to bash so that it loads every time you open a terminal
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc
-source ~/.zshrc
+# source ~/.zshrc
 
 echo "Installing Ruby ${RUBY_VERSION}..."
 rbenv install $RUBY_VERSION
@@ -108,5 +113,9 @@ echo "Install node completed."
 echo "Install yarn"
 brew install yarn
 echo "Install yarn completed."
+
+echo "Install n"
+npm install -g n
+echo "Install n completed."
 
 echo -e "\n\nDone. \n\n"
