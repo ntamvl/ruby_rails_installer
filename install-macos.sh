@@ -3,7 +3,7 @@
 set -e
 
 RUBY_VERSION=3.0.3
-RAILS_VERSION=7.0.0
+RAILS_VERSION=7.0.2.3
 
 echo "Install homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -117,5 +117,9 @@ echo "Install yarn completed."
 echo "Install n"
 npm install -g n
 echo "Install n completed."
+
+echo "Install imagemagick"
+brew install imagemagick
+echo "Install imagemagick completed."
 
 echo -e "\n\nDone. \n\n"
