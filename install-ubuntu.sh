@@ -48,7 +48,10 @@ rbenv rehash
 rails -v
 echo -e "Install Rails ${RAILS_VERSION} done. \n\n"
 
-echo "Starting PostgreSQL..."
+# Install MySQL
+# sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+
+echo "Installing PostgreSQL..."
 sudo apt install -y postgresql postgresql-contrib
 # sudo -i -u postgres
 # psql
