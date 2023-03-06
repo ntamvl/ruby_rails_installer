@@ -2,8 +2,8 @@
 
 set -e
 
-RUBY_VERSION=3.0.3
-RAILS_VERSION=7.0.2.3
+RUBY_VERSION=3.2.1
+RAILS_VERSION=7.0.4.3
 
 echo "Install homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -59,7 +59,7 @@ brew install postgresql
 echo "Install PostgreSQL done. \n\n"
 
 echo "Starting PostgreSQL..."
-brew services start postgresql
+brew services start postgresql@14
 # To upgrade databse from old version PG
 # brew postgresql-upgrade-database
 
@@ -118,8 +118,8 @@ echo "Install n"
 npm install -g n
 echo "Install n completed."
 
-echo "Install imagemagick"
-brew install imagemagick
-echo "Install imagemagick completed."
+echo "Install imagemagick and libvips"
+brew install imagemagick libvips
+echo "Install imagemagick & libvips completed."
 
 echo -e "\n\nDone. \n\n"
